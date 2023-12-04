@@ -1,0 +1,66 @@
+.ImagenLogo {
+    align-items: center;
+    align-content: center;
+    z-index: 10;
+    padding: 15px 15px 15px 15px;
+    height: 90px;
+}
+
+#navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    color: #fff;
+    width: 100%;
+    background-color: #393646;
+    padding: 0 30px 0px 0
+    
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    list-style: none;
+
+    li {
+        display: flex;
+        gap: 30px;
+        margin: 0 14px;
+       color: white;
+       font-size: 1.2rem;
+
+       
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        color: rgb(117, 213, 20);
+    }
+
+}
+
+p {
+    font-size: 1em;
+}
+
+
+.CartWidget {
+    display: flex;
+    
+    img {
+        width: 30px;
+        width: 30px;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+ 
+
+}
