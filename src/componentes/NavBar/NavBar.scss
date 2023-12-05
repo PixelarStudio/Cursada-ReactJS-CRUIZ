@@ -6,7 +6,7 @@
     height: 90px;
 }
 
-#navbar {
+.navbar {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -49,18 +49,3 @@ p {
 }
 
 
-.CartWidget {
-    display: flex;
-    
-    img {
-        width: 30px;
-        width: 30px;
-    }
-
-    p {
-        font-size: 1em;
-    }
-
- 
-
-}

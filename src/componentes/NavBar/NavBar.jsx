@@ -3,7 +3,7 @@ import './NavBar.scss'
 
 const NavBar = () => {
   return (
-    <div id="navbar">
+    <nav id="navbar" className="navbar">
       <div className="ImagenLogo">
         <img src="./img/Logo.png" width={190} alt="" />
       </div>
@@ -16,7 +16,7 @@ const NavBar = () => {
       </ul>
       <CartWidget />
 
-    </div>
+    </nav>
   );
 };
 
