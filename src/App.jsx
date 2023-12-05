@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import ItemListContainer from './componentes/ItemListContainer'
 import NavBar from './componentes/NavBar/NavBar'
 
@@ -6,7 +6,7 @@ import NavBar from './componentes/NavBar/NavBar'
 function App() {
 
   return (
-   <div id="App">
+   <div id="App" className="App">
     <NavBar />
     <ItemListContainer saludo={"Bienvenidos a mi Ecommerce"} />
    </div>
