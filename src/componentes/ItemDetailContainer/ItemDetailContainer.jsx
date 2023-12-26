@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import obtenerProductos from "../utilidades/data"
+import obtenerProductos from "../Utilidades/data"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
 

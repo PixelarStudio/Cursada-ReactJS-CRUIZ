@@ -4,7 +4,7 @@ import './CartWidget.scss'
 const CartWidget = () => {
   return (
     <div className="CartWidget">
-      <MdOutlineShoppingCart clasName="MdOutlineShoppingCart" size={32} />
+      <MdOutlineShoppingCart className="MdOutlineShoppingCart" size={32} />
       <p>1</p>
     </div>
   );

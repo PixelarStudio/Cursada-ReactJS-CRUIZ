@@ -6,9 +6,9 @@ import "./NavBar.scss";
 const NavBar = () => {
   return (
     <nav id="navbar" className="navbar">
-      <div className="ImagenLogo">
-        <img src="./img/logo.png" width={215} alt="Logo de Pro Gamer" />
-      </div>
+      <Link to="/" className="ImagenLogo">
+        <img src="./img/Logo.png" width={215} alt="Logo de Pro Gamer" />
+      </Link>
 
       <ul>
         <li>

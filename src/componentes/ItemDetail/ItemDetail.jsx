@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import "./ItemDetail.scss";
 
 const ItemDetail = ({ producto }) => {
@@ -8,7 +7,7 @@ const ItemDetail = ({ producto }) => {
       <div className="texto">
         <h2>{producto.nombre}</h2>
         <p>{producto.descripcion}</p>
-        <p>${producto.precio}</p>
+        <p>$ {producto.precio}</p>
       </div>
     </div>
   );
