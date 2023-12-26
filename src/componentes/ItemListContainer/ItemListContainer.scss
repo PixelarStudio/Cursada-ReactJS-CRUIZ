@@ -1,12 +1,23 @@
-.ItemList {
-    background-color: #8b8d92;
-    text-align: center;
-    padding: 40px;
-    color: white;
-}
+.item-list-container {
+    padding: 0 20px;
+  }
+  
+  .item-list-container .bienvenida {
+    font-size: 25px;
+    width: 100%;
+    padding: 0;
+margin: 50px 50px 50px 50px;
+color: #393646;
+text-align: center;
+font-size: 40px;
 
-.ListContainer {
-    text-align: center;
-    color: white;
-}
-
+  }
+  
+  .cargando{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

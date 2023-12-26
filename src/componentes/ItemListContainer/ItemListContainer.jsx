@@ -1,32 +1,53 @@
 import { useState, useEffect } from "react";
-import obtenerProductos from "../Utilidades/data";
-import "./ItemListContainer.scss";
+import obtenerProductos from "../utilidades/data";
 import ItemList from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
+import { FadeLoader } from "react-spinners"
 
-const ItemListContainer = ({ saludo }) => {
+
+import "./ItemListContainer.scss";
+
+const ItemListContainer = ({ bienvenida }) => {
+
   const [productos, setProductos] = useState([]);
+  const [cargando, setCargando] = useState(true);
+
+  const { categoria } = useParams()
+
 
   useEffect(() => {
+    setCargando(true)
     obtenerProductos
       .then((respuesta) => {
-        setProductos(respuesta);
+        if (categoria) {
+          const productosFiltrados = respuesta.filter(
+            (producto) => producto.categoria === categoria
+          );
+          setProductos(productosFiltrados);
+        } else {
+          setProductos(respuesta);
+        }
       })
-
       .catch((error) => {
         console.log(error);
       })
-
       .finally(() => {
-        console.log("Se finalizo la Promesa");
+        setCargando(false);
       });
-  }, []);
+  }, [categoria]);
 
   return (
-    <div id="App" className="ItemList">
-      <h1>{saludo}</h1>
-    
-      <ItemList productos={productos}/> 
-    </div>
+    <>
+    {cargando ? (
+      <div className="cargando">
+<FadeLoader color="#36d7b7" />      </div>
+    ) : (
+      <div className="item-list-container">
+        <p className="bienvenida">{bienvenida}</p>
+        <ItemList productos={productos} />
+      </div>
+    )}
+  </>
   );
 };
 

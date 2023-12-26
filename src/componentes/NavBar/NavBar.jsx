@@ -1,21 +1,31 @@
 import CartWidget from "./CartWidget";
-import './NavBar.scss'
+import { Link } from "react-router-dom";
+
+import "./NavBar.scss";
 
 const NavBar = () => {
   return (
     <nav id="navbar" className="navbar">
       <div className="ImagenLogo">
-        <img src="./img/Logo.png" width={190} alt="" />
+        <img src="./img/logo.png" width={215} alt="Logo de Pro Gamer" />
       </div>
 
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Arma Tu PC</a></li>
-        <li><a href="#">Tienda</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li>
+          <Link to="/">Inicio</Link>
+        </li>
+        <li>
+          <Link to="/categorias/almacenamiento">Almacenamiento</Link>
+        </li>
+        <li>
+          <Link to="/categorias/procesadores">Procesadores</Link>
+        </li>
+        <li>
+          <Link to="/categorias/placasdevideo">Placas de Video</Link>
+        </li>
       </ul>
-      <CartWidget />
 
+      <CartWidget />
     </nav>
   );
 };
