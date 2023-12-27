@@ -7,6 +7,8 @@ const ItemDetail = ({ producto }) => {
       <div className="texto">
         <h2>{producto.nombre}</h2>
         <p>$ {producto.precio}</p>
+        <p>Stock: {producto.stock}</p>
+
       </div>
     </div>
   );
