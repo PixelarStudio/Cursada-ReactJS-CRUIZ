@@ -21,7 +21,7 @@ const NavBar = () => {
           <Link to="/categorias/procesadores">Procesadores</Link>
         </li>
         <li>
-          <Link to="/categorias/placasdevideo">Placas de Video</Link>
+          <Link to="/categorias/gpu">Placas de Video</Link>
         </li>
       </ul>
 

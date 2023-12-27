@@ -10,7 +10,7 @@ const ItemListContainer = ({ bienvenida }) => {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
 
-  const { categoria } = useParams()
+  const {categoria} = useParams()
 
   useEffect(() => {
     setCargando(true);

@@ -7,6 +7,7 @@ const ItemDetailContainer = () => {
   const [producto, setProducto] = useState({})
   const { id } = useParams()
 
+  
   useEffect(()=>{
     obtenerProductos
       .then((respuesta)=> {
