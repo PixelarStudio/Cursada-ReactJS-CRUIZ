@@ -23,3 +23,36 @@
     font-size: 30px;
     
   }
+
+  .item-detail .finalizar-compra {
+    width: 200px; 
+    font-size: .6em;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #404042 ;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #ffa500;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    
+  }
+  
+  .item-detail .finalizar-compra:hover {
+    width: 200px; 
+    font-size: .6em;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #ffa500 ;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    color: white;
+}
+
