@@ -1,16 +1,44 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/prop-types */
+import { useState, useContext } from "react";
+import ItemCount from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
+import { CartContext } from "../CartContext/CartContext";
+
 import "./ItemDetail.scss";
 
 const ItemDetail = ({ producto }) => {
+  const [toggle, setToggle] = useState(false);
+  const { añadirProducto } = useContext(CartContext);
+
+  const agregarAlCarrito = (contador) => {
+    const nuevoProducto = { ...producto, cantidad: contador };
+    añadirProducto(nuevoProducto);
+    setToggle(true);
+  };
+
   return (
-    <div className="item-detail">
+    <section className="item-detail">
       <img className="imagen" src={producto.img} alt={producto.nombre} />
-      <div className="texto">
+      <article className="texto">
         <h2>{producto.nombre}</h2>
         <p>$ {producto.precio}</p>
         <p>Stock: {producto.stock}</p>
+        {toggle ? (
+          <>
+          <Link to="/carrito" className="finalizar-compra">Finalizar Compra</Link>
 
-      </div>
-    </div>
+          <Link to="/"  className="finalizar-compra">Seguir Comprando</Link>
+          
+          </>
+        ) : (
+          <ItemCount
+            stock={producto.stock}
+            agregarAlCarrito={agregarAlCarrito}
+          />
+        )}
+      </article>
+    </section>
   );
 };
 export default ItemDetail;

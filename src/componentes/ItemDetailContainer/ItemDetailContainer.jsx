@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import obtenerProductos from "../Utilidades/data"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
-
+import "./ItemDetailContainer.scss"
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState({})
   const { id } = useParams()
@@ -21,9 +21,9 @@ const ItemDetailContainer = () => {
   }, )
 
   return (
-    <div>
+    <article>
       <ItemDetail producto={producto} />
-    </div>
+    </article>
   )
 }
 export default ItemDetailContainer

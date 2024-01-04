@@ -4,11 +4,13 @@ import "./ItemList.scss";
 
 const ItemList = ({ productos }) => {
   return (
-    <div className="item-list">
+    <ul className="item-list">
       {productos.map((producto) => (
-        <Item producto={producto} key={producto.id} />
+        <li key={producto.id}>
+          <Item producto={producto} key={producto.id} />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

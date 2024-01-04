@@ -12,16 +12,16 @@ const NavBar = () => {
 
       <ul>
         <li>
-          <Link to="/">Inicio</Link>
+          <Link to="/">INICIO</Link>
         </li>
         <li>
-          <Link to="/categorias/almacenamiento">Almacenamiento</Link>
+          <Link to="/categorias/almacenamiento">ALMACENAMIENTO</Link>
         </li>
         <li>
-          <Link to="/categorias/procesadores">Procesadores</Link>
+          <Link to="/categorias/procesadores">PROCESADORES</Link>
         </li>
         <li>
-          <Link to="/categorias/gpu">Placas de Video</Link>
+          <Link to="/categorias/gpu">PLACAS DE VIDEO</Link>
         </li>
       </ul>
 

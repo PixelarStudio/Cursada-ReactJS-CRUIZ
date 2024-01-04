@@ -12,7 +12,7 @@ const productos = [
   nombre: "DISCO EXTERNO 2TB WESTERN DIGITAL",
   img: "/img/almacenamiento1.jpeg",
   precio: 135000,
-  stock: 120,
+  stock: 20,
 
   categoria: "almacenamiento"
 },
@@ -70,7 +70,7 @@ const productos = [
   nombre: "RTX 3080 TI 12 GB TUF GAMING",
   img: "/img/Gpu3.jpeg",
   precio: 780200,
-  stock: 1,
+  stock: 10,
   categoria: "gpu"
 },
 {
@@ -78,7 +78,7 @@ const productos = [
   nombre: "AMD RADEON ASROCK RX6600XT 8 GB",
   img: "/img/Gpu1.png",
   precio: 835403,
-  stock: 141,
+  stock: 11,
   categoria: "gpu"
 },
 {

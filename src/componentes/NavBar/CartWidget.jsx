@@ -1,12 +1,18 @@
-import { MdOutlineShoppingCart } from "react-icons/md";
 import './CartWidget.scss'
+import { Link } from "react-router-dom"
+import { CartContext } from "../CartContext/CartContext";
+import { useContext } from "react"
+
 
 const CartWidget = () => {
+  const {totalCantidad} = useContext(CartContext)
+
   return (
-    <div className="CartWidget">
-      <MdOutlineShoppingCart className="MdOutlineShoppingCart" size={32} />
-      <p>1</p>
-    </div>
+    <Link to="/carrito" id="cartwidget" className="CartWidget">
+            <img src="/img/carrito.png" alt="icono del carrito" />
+
+      <p className="p-count">{totalCantidad()}</p>
+    </Link>
   );
 };
 
