@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { CartProvider } from "./componentes/CartContext/CartContext";
 import Carrito from "./componentes/Carrito/Carrito";
 
+
 import "./App.scss";
 
 function App() {

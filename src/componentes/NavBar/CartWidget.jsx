@@ -5,13 +5,13 @@ import { useContext } from "react"
 
 
 const CartWidget = () => {
-  const {totalCantidad} = useContext(CartContext)
+  const {carrito, totalCantidad} = useContext(CartContext)
 
   return (
     <Link to="/carrito" id="cartwidget" className="CartWidget">
             <img src="/img/carrito.png" alt="icono del carrito" />
 
-      <p className="p-count">{totalCantidad()}</p>
+      <p className="p-count">{ carrito.length !== 0 && <p>{totalCantidad()}</p> }</p>
     </Link>
   );
 };

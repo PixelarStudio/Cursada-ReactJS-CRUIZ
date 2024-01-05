@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 const CartContext = createContext()
 
-const CartProvider = ( {children} ) =>{
+const CartProvider = ({children}) =>{
   const [carrito, setCarrito] = useState([])
 
   const añadirProducto = (producto) =>{
@@ -38,9 +38,14 @@ const CartProvider = ( {children} ) =>{
     const productosFiltrados = carrito.filter((producto) => producto.id !== idProducto)
     setCarrito(productosFiltrados)
   }
+  
+  const totalPrecio = ()=> {
+    return carrito.reduce((total, producto)=> total + (producto.cantidad * producto.precio), 0)
+
+  }
 
   return(
-    <CartContext.Provider value={{carrito, añadirProducto, totalCantidad, borrarCarrito, borrarProducto}}>
+    <CartContext.Provider value={{carrito, añadirProducto, totalCantidad, borrarCarrito, borrarProducto, totalPrecio}}>
       {children}
     </CartContext.Provider>
   )
