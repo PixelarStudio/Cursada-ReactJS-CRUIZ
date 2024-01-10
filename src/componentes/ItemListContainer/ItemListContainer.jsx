@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import obtenerProductos from "../Utilidades/data"
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { FadeLoader } from "react-spinners";
+import {collection, getDocs, query, where} from "firebase/firestore"
+import db from "../../db/Db";
 
 import "./ItemListContainer.scss";
 
@@ -10,26 +11,40 @@ const ItemListContainer = ({ bienvenida }) => {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
 
-  const {categoria} = useParams()
+  const { categoria } = useParams();
 
   useEffect(() => {
-    setCargando(true);
-    obtenerProductos
+    
+    setCargando(true)
+
+    let consulta
+    const productosRef = collection(db, "Productos");
+
+    if(categoria){
+      //filtrar data
+      consulta = query(productosRef, where("categoria", "==", categoria))
+    }else{
+      //traer toda la data
+      consulta = productosRef
+    }
+
+    getDocs(consulta)
       .then((respuesta) => {
-        if (categoria) {
-          const productosFiltrados = respuesta.filter(
-            (producto) => producto.categoria === categoria);
-          setProductos(productosFiltrados);
-        } else {
-          setProductos(respuesta);
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        setCargando(false);
+      let productosDb = respuesta.docs.map((producto) => {
+
+        return { 
+          
+          id: producto.id, ...producto.data() 
+        
+        };
+        
       });
+      setProductos(productosDb)
+    })
+    .catch((error)=> console.log(error))
+    .finally(()=> setCargando(false))
+
+
   }, [categoria]);
 
   return (

@@ -1,29 +1,29 @@
-import { useEffect, useState } from "react"
-import obtenerProductos from "../Utilidades/data"
-import ItemDetail from "../ItemDetail/ItemDetail"
-import { useParams } from "react-router-dom"
-import "./ItemDetailContainer.scss"
+import { useEffect, useState } from "react";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
+import {doc, getDoc} from "firebase/firestore";
+import db from "../../db/Db";
+
+import "./ItemDetailContainer.scss";
+
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState({})
-  const { id } = useParams()
+  const { id } = useParams();
 
   
-  useEffect(()=>{
-    obtenerProductos
-      .then((respuesta)=> {
-        const productoEncontrado = respuesta.find( (prod)=> prod.id === id)
-        setProducto(productoEncontrado)
-      })
-      .catch((err)=>{
-        console.log(err)
-      })
+  useEffect(() => {
+    const productoRef = doc(db, "Productos", id);
+    getDoc(productoRef).then((respuesta) => {
+      const productoDb = { id: respuesta.id, ...respuesta.data() };
+      setProducto(productoDb);
+    });
+  }, [id]);
 
-  }, )
 
   return (
     <article>
       <ItemDetail producto={producto} />
     </article>
-  )
-}
+  );
+};
 export default ItemDetailContainer
