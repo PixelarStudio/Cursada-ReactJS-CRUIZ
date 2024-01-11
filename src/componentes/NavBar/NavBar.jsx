@@ -6,8 +6,8 @@ import "./NavBar.scss";
 const NavBar = () => {
   return (
     <nav id="navbar" className="navbar">
-      <Link to="/" className="ImagenLogo">
-        <img src="./img/Logo.png" width={215} alt="Logo de Pro Gamer" />
+      <Link to="/">
+        <img className="img-pad" src="./img/Logo.png" width={250} alt="Logo de Pro Gamer" />
       </Link>
 
       <ul>
