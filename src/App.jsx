@@ -4,6 +4,7 @@ import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailCon
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { CartProvider } from "./componentes/CartContext/CartContext";
 import Carrito from "./componentes/Carrito/Carrito";
+import Footer from './componentes/Footer/Footer'; // Asegúrate de que la ruta sea correcta
 
 import "./App.scss";
 
@@ -21,8 +22,9 @@ function App() {
           <Route path="/detalle/:id" element={<ItemDetailContainer />} />
           <Route path="/carrito" element={<Carrito />} />
           <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
+          </Routes>
       </CartProvider>
+      <Footer />
     </BrowserRouter>
   );
 }

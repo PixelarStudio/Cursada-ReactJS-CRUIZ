@@ -5,8 +5,8 @@ import "./Item.scss";
 
 const Item = ({ producto }) => {
   return (
-    <article className="productCard">
-      <img className="imagProduc" src={producto.img} alt={producto.nombre} />
+    <article className="productcard">
+      <img className="imagproduc" src={producto.img} alt={producto.nombre} />
       <p className="productos__h2"> {producto.nombre} </p>
       <p className="productos__precio">$ {producto.precio} </p>
       <p className="productos__stock">Stock: {producto.stock} </p>

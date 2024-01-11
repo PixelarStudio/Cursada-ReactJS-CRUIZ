@@ -14,52 +14,59 @@ const Carrito = () => {
       <article className="carritovacio">
         <h2>El carrito se encuentra vacio</h2>
         <Link to="/" className="buttons">
-         <b>VOLVER AL INICIO</b>
+          <b>VOLVER AL INICIO</b>
         </Link>
       </article>
     );
   }
 
   return (
-    <section id="carritoContainer">
-      <ul className="carritoItem">
-        {carrito.map((producto) => (
-          <li key={producto.id}>
-            <img
-              src={producto.img}
-              alt={producto.nombre}
-              style={{ width: "120px", height: "120px" }}
-            />
-            <p>
-              <b>ID: </b> {producto.id}
-            </p>
-            <p>
-              <b>PRODUCTO: </b> {producto.nombre}
-            </p>
-            <p>
-              <b>PRECIO: </b>$ {producto.precio}
-            </p>
-            <p>
-              <b>CANTIDAD: </b> {producto.cantidad}
-            </p>
-            <button
-              className="button-trash"
-              onClick={() => borrarProducto(producto.id)}
-            >
-              <FaTrashAlt size={30} />
-            </button>
-          </li>
-        ))}
-      </ul>
-    
+    <section id="carritocontainer">
+      <table className="carrito-table">
+        <thead>
+          <tr>
+            <th>IMAGEN</th>
+            <th>ID</th>
+            <th>PRODUCTO</th>
+            <th>PRECIO</th>
+            <th>CANTIDAD</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          {carrito.map((producto) => (
+            <tr key={producto.id}>
+              <td>
+                <img
+                  src={producto.img}
+                  alt={producto.nombre}
+                  style={{ width: "120px", height: "120px" }}
+                />
+              </td>
+              <td>{producto.id}</td>
+              <td>{producto.nombre}</td>
+              <td>${producto.precio}</td>
+              <td>{producto.cantidad}</td>
+              <td>
+                <button
+                  className="button-trash"
+                  onClick={() => borrarProducto(producto.id)}
+                >
+                  <FaTrashAlt size={30} />
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
       <article className="totalprecio">
         <h3>TOTAL: {totalPrecio()}</h3>
       </article>
 
-        <button className="buttons" onClick={borrarCarrito}>
+      <button className="buttons" onClick={borrarCarrito}>
         <b>VACIAR CARRITO</b>
       </button>
-
     </section>
   );
 };
