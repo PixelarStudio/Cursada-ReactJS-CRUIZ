@@ -1,56 +1,77 @@
 /* Checkout.scss */
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 25px;
-    background-color: #393646;
-    color: #ffa500;
-    border-radius: 10px;
-    max-width: 1200px;
-    margin: 100px;
-    align-content: center;
-    justify-content: center;
-  }
-  
-  label {
-    margin-bottom: 5px;
-  }
-  
-  input {
-    padding: 10px;
-    margin-bottom: 15px;
-    width: 100%;
-    border: 1px solid #ffa500;
-    border-radius: 5px;
-    background-color: #393646;
-    color: white;
-    font-size: 1.4em;
-  }
-  
-  button {
-    background-color: #ffa500;
-    color: #393646;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #ffcc00;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px;
+  background-color: #393646;
+  color: #ffa500;
+  border-radius: 10px;
+  max-width: 1200px;
+  width: 1000px;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 27px;
+  box-shadow: 3px 3px 6px #777777, -3px -3px 6px #ffffff;
 
-  .article-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 25px;
-    color: #ffa500;
-    border-radius: 10px;
-    align-content: center;
-    justify-content: center;
-    height: 65vh;
-    
-  }
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  border: 1px solid #ffa500;
+  border-radius: 5px;
+  background-color: #393646;
+  color: white;
+  font-size: 1.4em;
+}
+
+button {
+  background-color: #ffa500;
+  color: #393646;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+
+}
+
+button:hover {
+  background-color: #ffcc00;
+  font-weight: bold;
+}
+
+.article-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding: 35px;
+  color: #393646;
+  justify-content: center;
+  width: auto;
+  margin-top: -0.51%;
+}
+
+.article-form h4 {
+  border: 1px solid #ffa500;
+  padding: 15px;
+  border-radius: 10px;
+  color: #ffffff;
+  margin-bottom: 3%;
+}
+
+.article-form h2 {
+  text-decoration: underline #ffa500;
+  padding: 15px;
+  border-radius: 10px;
+  color: #393646;
+  margin-bottom: 3%;
+}

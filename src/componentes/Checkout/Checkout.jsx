@@ -1,16 +1,16 @@
-import {useState, useContext} from "react";
-import Form from "./Form"
+import { useState, useContext } from "react";
+import Form from "./Form";
 import { CartContext } from "../CartContext/CartContext";
-import {addDoc, collection} from "firebase/firestore"
+import { addDoc, collection } from "firebase/firestore";
 import db from "../../db/Db";
-
-import "./Checkout.scss"
+import "./Checkout.scss";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
   const [datosForm, setDatosForm] = useState({
     nombre: "",
     telefono: "",
-    email: ""
+    email: "",
   });
   const [idOrden, setIdOrden] = useState(null);
   const { carrito, totalPrecio, borrarCarrito } = useContext(CartContext);
@@ -33,9 +33,8 @@ const Checkout = () => {
   const subirOrden = (orden) => {
     const ordenesRef = collection(db, "ordenes");
     addDoc(ordenesRef, orden).then((respuesta) => {
-      setIdOrden(respuesta.id)
-      //limpiar carrito
-      borrarCarrito()
+      setIdOrden(respuesta.id);
+      borrarCarrito();
     });
   };
 
@@ -44,12 +43,26 @@ const Checkout = () => {
       {idOrden ? (
         <section className="orden-fin">
           <article className="genera-orden">
-          <h1>Su pedido fue ingresado con Exito.</h1>
-          <h4>Su N° de orden es: <span>{idOrden}</span> </h4>
+            <h2>SU PEDIDO FUE INGRESADO CON EXITO</h2>
           </article>
-          <article className="genera-orden">
-          <h2>Muchas Gracias por Su Compra</h2>
+
+          <article className="ident-pedido">
+            <article className="genera-orden">
+              <h4>
+                SU IDENTIFICACION DE PEDIDO ES: <span>{idOrden}</span>{" "}
+              </h4>
+            </article>
+
+            <article className="genera-orden">
+              <h2>MUCHAS GRACIAS POR SU COMPRA 🛒</h2>
+            </article>
           </article>
+
+          <Link to="/">
+            <button className="buttons-fin">
+              <h4>VOLVER AL INICIO</h4>
+            </button>
+          </Link>
         </section>
       ) : (
         <Form
