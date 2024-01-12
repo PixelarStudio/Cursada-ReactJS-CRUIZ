@@ -4,7 +4,6 @@ import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailCon
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { CartProvider } from "./componentes/CartContext/CartContext";
 import Carrito from "./componentes/Carrito/Carrito";
-import Footer from './componentes/Footer/Footer'; // Asegúrate de que la ruta sea correcta
 import Checkout from "./componentes/Checkout/Checkout";
 
 import "./App.scss";
@@ -26,7 +25,6 @@ function App() {
           <Route path="*" element={<Navigate to="/" />} />
           </Routes>
       </CartProvider>
-      <Footer />
     </BrowserRouter>
   );
 }

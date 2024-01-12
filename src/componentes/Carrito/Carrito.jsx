@@ -21,7 +21,7 @@ const Carrito = () => {
   }
 
   return (
-    <section id="carritocontainer">
+    <section id="carritocontainer" >
       <table className="carrito-table">
         <thead>
           <tr>

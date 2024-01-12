@@ -43,7 +43,7 @@ const Checkout = () => {
       {idOrden ? (
         <section className="orden-fin">
           <article className="genera-orden">
-            <h2>SU PEDIDO FUE INGRESADO CON EXITO</h2>
+            <h3>SU PEDIDO FUE INGRESADO CON EXITO</h3>
           </article>
 
           <article className="ident-pedido">
@@ -54,13 +54,13 @@ const Checkout = () => {
             </article>
 
             <article className="genera-orden">
-              <h2>MUCHAS GRACIAS POR SU COMPRA 🛒</h2>
+              <h4>MUCHAS GRACIAS POR SU COMPRA 🛒</h4>
             </article>
           </article>
 
           <Link to="/">
             <button className="buttons-fin">
-              <h4>VOLVER AL INICIO</h4>
+              <h5>VOLVER AL INICIO</h5>
             </button>
           </Link>
         </section>
