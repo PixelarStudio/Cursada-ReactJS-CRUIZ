@@ -1,0 +1,56 @@
+/* Checkout.scss */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    background-color: #393646;
+    color: #ffa500;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 100px;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid #ffa500;
+    border-radius: 5px;
+    background-color: #393646;
+    color: white;
+    font-size: 1.4em;
+  }
+  
+  button {
+    background-color: #ffa500;
+    color: #393646;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ffcc00;
+  }
+
+  .article-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    color: #ffa500;
+    border-radius: 10px;
+    align-content: center;
+    justify-content: center;
+    height: 65vh;
+    
+  }
