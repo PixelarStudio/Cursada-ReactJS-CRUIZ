@@ -67,6 +67,7 @@ const Carrito = () => {
       <button className="buttons" onClick={borrarCarrito}>
         <b>VACIAR CARRITO</b>
       </button>
+      
       <Link to="/checkout">
       <button className="buttons">
         <b>FINALIZAR PEDIDO</b>
