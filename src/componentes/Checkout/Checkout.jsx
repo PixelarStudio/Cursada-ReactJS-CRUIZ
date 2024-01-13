@@ -59,7 +59,7 @@ const Checkout = () => {
           </article>
 
           <Link to="/">
-            <button className="buttons-fin">
+            <button className="button-d">
               <h5>VOLVER AL INICIO</h5>
             </button>
           </Link>

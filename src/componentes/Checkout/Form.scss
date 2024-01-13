@@ -31,15 +31,18 @@ input {
   font-size: 1.4em;
 }
 
-button {
-  background-color: #ffa500;
-  color: #393646;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
+.button-d {
+    font-size: 1.1em;
+    color: white;
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
+    background: #404042;
+    cursor: pointer;
+    font-weight: bold;
+    padding: .6em;
+    text-align: center;
+    margin: 10px;
 
 }
 

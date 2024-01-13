@@ -17,8 +17,8 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<ItemListContainer bienvenida="Bienvenidos a Pro Gamer" />}          />
-          <Route path="/categorias/:categoria" element={<ItemListContainer bienvenida="Bienvenidos a Pro Gamer" />}          />
+            element={<ItemListContainer bienvenida="BIENVENIDOS A PRO GAMER" />}          />
+          <Route path="/categorias/:categoria" element={<ItemListContainer bienvenida="BIENVENIDOS A PRO GAMER" />}          />
           <Route path="/detalle/:id" element={<ItemDetailContainer />} />
           <Route path="/carrito" element={<Carrito />} />
           <Route path="/checkout" element={ <Checkout /> } />

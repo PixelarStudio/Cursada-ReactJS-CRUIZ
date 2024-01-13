@@ -41,7 +41,7 @@ const Form = ({ datosForm, guardarDatosInput, enviarOrder }) => {
           onChange={guardarDatosInput}
         />
 
-        <button type="submit">Enviar Pedido</button>
+        <button className="button-d" type="submit">Enviar Pedido</button>
       </form>
     </article>
   );
