@@ -3,7 +3,11 @@ import "./Form.scss";
 const Form = ({ datosForm, guardarDatosInput, enviarOrder }) => {
   return (
     <article className="article-form">
+      <article>
+
       <h2>FINALIZAR COMPRA</h2>
+
+      </article>
 
       <form onSubmit={enviarOrder}>
       <h4>DETALLES DE FACTURACION</h4>
