@@ -5,7 +5,7 @@ const Form = ({ datosForm, guardarDatosInput, enviarOrder }) => {
     <article className="article-form">
       <article>
 
-      <h2>FINALIZAR COMPRA</h2>
+      <h2 >FINALIZAR COMPRA</h2>
 
       </article>
 

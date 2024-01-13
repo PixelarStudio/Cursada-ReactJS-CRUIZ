@@ -13,8 +13,11 @@ const Carrito = () => {
     return (
       <article className="carritovacio">
         <h2>El carrito se encuentra vacio</h2>
-        <Link to="/" className="buttons">
+        <Link to="/">
+          <button className="button-d">
+
           <b>VOLVER AL INICIO</b>
+          </button>
         </Link>
       </article>
     );
