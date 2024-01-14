@@ -45,7 +45,10 @@
 }
 
 .productcard:hover {
-  box-shadow: 0 4px 4px 0 rgba(186, 227, 22, 0.2);
+  box-shadow: 2px 2px 0px 0px #b0b0b0;
+  transform: scale(1.02);
+  transition: ease-out .15s;
+  color: #404042;
 }
 
 .buttons-i {

@@ -13,7 +13,6 @@ function App() {
     <BrowserRouter>
       <CartProvider>
         <NavBar />
-
         <Routes>
           <Route
             path="/"
