@@ -23,7 +23,7 @@ const Form = ({ datosForm, guardarDatosInput, enviarOrder }) => {
 
         <label htmlFor="telefono">TELEFONO</label>
         <input
-          type="text"
+          type="tel"
           id="telefono"
           name="telefono"
           placeholder="Ingrese su Telefono"
@@ -33,7 +33,7 @@ const Form = ({ datosForm, guardarDatosInput, enviarOrder }) => {
 
         <label htmlFor="email">CORREO ELECTRONICO</label>
         <input
-          type="text"
+          type="email"
           id="email"
           name="email"
           placeholder="Ingrese su Correo"
@@ -41,7 +41,7 @@ const Form = ({ datosForm, guardarDatosInput, enviarOrder }) => {
           onChange={guardarDatosInput}
         />
 
-        <button className="button-d" type="submit">Enviar Pedido</button>
+        <button className="button-d" type="submit">ENVIAR PEDIDO</button>
       </form>
     </article>
   );

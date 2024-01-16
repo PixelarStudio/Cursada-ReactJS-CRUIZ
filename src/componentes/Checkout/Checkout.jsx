@@ -40,8 +40,7 @@ const Checkout = () => {
 
   return (
     <div>
-      {idOrden ? (
-        <section className="orden-fin">
+      {idOrden ? (<section className="orden-fin">
           <article className="genera-orden">
             <h3>SU PEDIDO FUE INGRESADO CON EXITO</h3>
           </article>
@@ -49,12 +48,12 @@ const Checkout = () => {
           <article className="ident-pedido">
             <article className="genera-orden">
               <h4>
-                SU IDENTIFICACION DE PEDIDO ES: <span>{idOrden}</span>{" "}
+                EL IDENTIFICADOR DE SU PEDIDO ES: <span> {idOrden}</span>
               </h4>
             </article>
 
             <article className="genera-orden">
-              <h4>MUCHAS GRACIAS POR SU COMPRA 🛒</h4>
+              <h4>MUCHAS GRACIAS POR SU COMPRA!</h4>
             </article>
           </article>
 

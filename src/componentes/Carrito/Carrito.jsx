@@ -64,7 +64,7 @@ const Carrito = () => {
       </table>
 
       <article className="totalprecio">
-        <h3>TOTAL: {totalPrecio()}</h3>
+        <h3>TOTAL: ${totalPrecio()}</h3>
       </article>
 
       <button className="buttons" onClick={borrarCarrito}>
