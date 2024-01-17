@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import {doc, getDoc} from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 
 import ItemDetail from "../ItemDetail/ItemDetail";
 import db from "../../db/Db";
@@ -8,10 +8,9 @@ import db from "../../db/Db";
 import "./ItemDetailContainer.scss";
 
 const ItemDetailContainer = () => {
-  const [producto, setProducto] = useState({})
+  const [producto, setProducto] = useState({});
   const { id } = useParams();
 
-  
   useEffect(() => {
     const productoRef = doc(db, "Productos", id);
     getDoc(productoRef).then((respuesta) => {
@@ -20,11 +19,10 @@ const ItemDetailContainer = () => {
     });
   }, [id]);
 
-
   return (
     <article>
       <ItemDetail producto={producto} />
     </article>
   );
 };
-export default ItemDetailContainer
+export default ItemDetailContainer;

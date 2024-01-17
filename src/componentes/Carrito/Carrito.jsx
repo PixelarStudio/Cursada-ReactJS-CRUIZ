@@ -16,8 +16,7 @@ const Carrito = () => {
         <h2>El carrito se encuentra vacio</h2>
         <Link to="/">
           <button className="button-d">
-
-          <b>VOLVER AL INICIO</b>
+            <b>VOLVER AL INICIO</b>
           </button>
         </Link>
       </article>
@@ -25,9 +24,8 @@ const Carrito = () => {
   }
 
   return (
-    <section id="carritocontainer" >
+    <section id="carritocontainer">
       <table className="carrito-table">
-     
         <tbody>
           {carrito.map((producto) => (
             <tr key={producto.id}>
@@ -62,12 +60,12 @@ const Carrito = () => {
       <button className="buttons" onClick={borrarCarrito}>
         <b>VACIAR CARRITO</b>
       </button>
-      
+
       <Link to="/checkout">
-      <button className="buttons">
-        <b>FINALIZAR PEDIDO</b>
-      </button>
-     </Link>
+        <button className="buttons">
+          <b>FINALIZAR PEDIDO</b>
+        </button>
+      </Link>
     </section>
   );
 };

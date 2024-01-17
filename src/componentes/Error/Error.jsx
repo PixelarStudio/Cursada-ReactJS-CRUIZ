@@ -13,7 +13,7 @@ const Error = () => {
             alt="Logo de Pro Gamer"
           />
         </Link>
-             
+
         <p className="fondo-error__h1">404 Not Found</p>
         <p>NO SE ENCONTRO LA PAGINA</p>
       </article>

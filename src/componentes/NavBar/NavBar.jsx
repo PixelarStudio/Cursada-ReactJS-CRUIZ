@@ -7,7 +7,11 @@ const NavBar = () => {
   return (
     <nav id="navbar" className="navbar">
       <Link to="/">
-        <img className="img-pad" src="./img/Logo.webp" alt="Logo de Pro Gamer" />
+        <img
+          className="img-pad"
+          src="./img/Logo.webp"
+          alt="Logo de Pro Gamer"
+        />
       </Link>
 
       <ul>

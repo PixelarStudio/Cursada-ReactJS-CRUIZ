@@ -36,12 +36,40 @@ ProGamer es una plataforma de e-commerce especializada en artículos de informá
 - React-spinners
 - Rollup
 - Sass
+- SweetAlert2
 
 ## 🛠 Tecnologías Utilizadas
+
 - JavaScript
 - HTML
 - CSS
 - ReactJs
+
+## 🖥 Instalacion
+
+Clonar el Repositorio: 
+
+```bash
+  git clone https://github.com/CJRUIZ-WEBDESIGN/Cursada-ReactJS-CRUIZ.git
+```
+
+Ingresar al Proyecto:
+
+```bash
+  cd Cursada-ReactJS-CRUIZ
+```
+
+Instalar las Dependencias:
+
+```bash
+  npm install
+```
+
+Iniciar el Proyecto:
+
+```bash
+  npm run dev
+```
 
 ## 🔗 Repositorio de la Cursada
 - [Cursada ReactJS por CJRUIZ-WEBDESIGN](https://github.com/CJRUIZ-WEBDESIGN/Cursada-ReactJS-CRUIZ)

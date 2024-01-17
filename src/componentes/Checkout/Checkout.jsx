@@ -9,7 +9,6 @@ import Swal from "sweetalert2";
 
 import "./Checkout.scss";
 
-
 const Checkout = () => {
   const [datosForm, setDatosForm] = useState({
     nombre: "",
@@ -24,19 +23,18 @@ const Checkout = () => {
     setDatosForm({ ...datosForm, [event.target.name]: event.target.value });
   };
 
-
   const enviarOrder = (event) => {
     event.preventDefault();
-    if(datosForm.email === datosForm.emailRepetido){
+    if (datosForm.email === datosForm.emailRepetido) {
       const orden = {
         comprador: { ...datosForm },
         productos: [...carrito],
         fecha: new Date(),
         total: totalPrecio(),
       };
-  
+
       subirOrden(orden);
-    }else{
+    } else {
       Swal.fire({
         title: "Por favor, repite el correo electronico.",
         showClass: {
@@ -44,17 +42,16 @@ const Checkout = () => {
             animate__animated
             animate__fadeInUp
             animate__faster
-          `
+          `,
         },
         hideClass: {
           popup: `
             animate__animated
             animate__fadeOutDown
             animate__faster
-          `
-        }
+          `,
+        },
       });
-
     }
   };
 
@@ -68,7 +65,8 @@ const Checkout = () => {
 
   return (
     <section>
-      {idOrden ? (<section className="orden-fin">
+      {idOrden ? (
+        <section className="orden-fin">
           <article className="genera-orden">
             <h3>SU PEDIDO FUE INGRESADO CON EXITO</h3>
           </article>
@@ -101,6 +99,5 @@ const Checkout = () => {
     </section>
   );
 };
-
 
 export default Checkout;
