@@ -57,3 +57,23 @@ span {
     border: 1px solid #ffa500;
 
 }
+
+@media (max-width: 768px) {
+    .orden-fin {
+        display: flex;
+        height: auto;
+        margin-top: 30px;
+        gap: 30px;
+        padding: 24px;
+    }
+
+    .ident-pedido {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .buttons-fin {
+        width: 100%;
+        font-size: 0.9em;
+    }
+}

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 import "./ItemCount.scss";
@@ -25,7 +24,7 @@ const ItemCount = ({ stock, agregarAlCarrito }) => {
         <p>{contador}</p>
         <button onClick={sumar}>+</button>
       </article>
-      <button onClick={ () => agregarAlCarrito(contador) } className="buttons-detail"> Agregar al carrito </button>
+      <button onClick={ () => agregarAlCarrito(contador) } className="buttons-detail"> AGREGAR AL CARRITO </button>
     </section>
   );
 };

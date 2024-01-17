@@ -1,5 +1,8 @@
 .img-pad {
     padding: 15px;
+    width: 100%;
+    height: auto;
+    max-width: 250px;
 }
 
 .navbar {
@@ -23,9 +26,10 @@ ul {
         display: flex;
         gap: 30px;
         margin: 0 14px;
-       color: white;
-       font-size: 1.2rem;
+        color: white;
+        font-size: 1.2rem;
     }
+
     a {
         text-decoration: none;
         color: white;
@@ -41,4 +45,33 @@ p {
     font-size: 1em;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
 
+    ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+
+        li {
+            margin: 5px 0;
+            gap: 15px;
+        }
+    }
+
+    .img-pad {
+        padding: 15px;
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+}

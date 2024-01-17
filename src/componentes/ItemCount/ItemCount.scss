@@ -1,45 +1,61 @@
-.item-count{
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .item-count .controles{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 20px;
-    justify-items: center;
-    width: 400px;
-    gap: 30px;
-    margin: 10px;
-    
-  }
-  
-  .controles button{
-    width: 50px;
-    height: 50px;
-    background-color: #393646;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    border: none;
-  }
-  
-  button:hover{
-    cursor: pointer;
-    background-color: #c58e28;
-    color:#393646;
-    font-weight: bold;
+.item-count {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
 
+.item-count .controles {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+  justify-items: center;
+  width: 400px;
+  gap: 30px;
+  margin: 10px;
+}
 
+.controles button {
+  width: 50px;
+  height: 50px;
+  background-color: #393646;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+}
 
+button:hover {
+  cursor: pointer;
+  background-color: #c58e28;
+  color: #393646;
+  font-weight: bold;
+}
+
+.item-count .terminar {
+  padding: 10px 0;
+  background-color: white;
+  border-radius: 4px;
+  font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+  .item-count {
+      width: 100%;
   }
-  
-  .item-count .terminar{
-    padding: 10px 0;
-    background-color: white ;
-    border-radius: 4px;
-    font-size: 20px;
 
+  .item-count {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
   }
+
+  .controles button {
+      width: 40px;
+      height: 40px;
+  }
+
+  .item-count .terminar {
+      font-size: 18px;
+  }
+}

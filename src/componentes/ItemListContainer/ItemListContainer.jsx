@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import ItemList from "../ItemList/ItemList";
-import { useParams } from "react-router-dom";
-import { FadeLoader } from "react-spinners";
 import { collection, getDocs, query, where } from "firebase/firestore";
+import { useParams } from "react-router-dom";
+
+import { FadeLoader } from "react-spinners";
+
+import ItemList from "../ItemList/ItemList";
 import db from "../../db/Db";
 
 import "./ItemListContainer.scss";

@@ -1,7 +1,8 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
+
 import { CartContext } from "../CartContext/CartContext";
 import { FaTrashAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 import "./Carrito.scss";
 
@@ -26,16 +27,7 @@ const Carrito = () => {
   return (
     <section id="carritocontainer" >
       <table className="carrito-table">
-        <thead>
-          <tr>
-            <th>IMAGEN</th>
-            <th>ID</th>
-            <th>PRODUCTO</th>
-            <th>PRECIO</th>
-            <th>CANTIDAD</th>
-            
-          </tr>
-        </thead>
+     
         <tbody>
           {carrito.map((producto) => (
             <tr key={producto.id}>

@@ -1,5 +1,5 @@
-import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
+import CartWidget from "./CartWidget";
 
 import "./NavBar.scss";
 
@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <nav id="navbar" className="navbar">
       <Link to="/">
-        <img className="img-pad" src="./img/Logo.webp" width={250} alt="Logo de Pro Gamer" />
+        <img className="img-pad" src="./img/Logo.webp" alt="Logo de Pro Gamer" />
       </Link>
 
       <ul>

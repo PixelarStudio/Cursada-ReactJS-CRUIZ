@@ -4,7 +4,6 @@
   text-shadow: 1px 1px rgb(255, 255, 255), -5px 0 10px rgb(41, 41, 41);
   padding: 10px;
   margin: 0;
-
 }
 
 .productos__stock {
@@ -20,7 +19,6 @@
   font-weight: bold;
   margin: 0;
   color: rgb(23, 64, 161);
-
 }
 
 .imagproduc {
@@ -64,13 +62,33 @@
 }
 
 .buttons-i:hover {
-  font-size: .7em;
   color: #404042;
-  width: 100%;
-  border-radius: 8px;
   background: #ffa500;
-  cursor: pointer;
-  font-weight: bold;
-  padding: .6em;
-  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .productos__nombre {
+    font-size: 1.1em;
+  }
+
+  .productos__stock {
+    font-size: 1em;
+  }
+
+  .productos__precio {
+    font-size: 1.3em;
+  }
+
+  .imagproduc {
+    width: 100%;
+  }
+
+  .productcard {
+    width: 100%;
+    margin: 5px;
+  }
+
+  .buttons-i {
+    font-size: .8em;
+  }
 }

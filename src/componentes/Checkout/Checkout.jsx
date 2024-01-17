@@ -1,16 +1,21 @@
 import { useState, useContext } from "react";
-import Form from "./Form";
+import { Link } from "react-router-dom";
 import { CartContext } from "../CartContext/CartContext";
 import { addDoc, collection } from "firebase/firestore";
+
+import Form from "./Form";
 import db from "../../db/Db";
+import Swal from "sweetalert2";
+
 import "./Checkout.scss";
-import { Link } from "react-router-dom";
+
 
 const Checkout = () => {
   const [datosForm, setDatosForm] = useState({
     nombre: "",
     telefono: "",
     email: "",
+    emailRepetido: "",
   });
   const [idOrden, setIdOrden] = useState(null);
   const { carrito, totalPrecio, borrarCarrito } = useContext(CartContext);
@@ -19,15 +24,38 @@ const Checkout = () => {
     setDatosForm({ ...datosForm, [event.target.name]: event.target.value });
   };
 
+
   const enviarOrder = (event) => {
     event.preventDefault();
-    const orden = {
-      comprador: { ...datosForm },
-      productos: [...carrito],
-      total: totalPrecio(),
-    };
+    if(datosForm.email === datosForm.emailRepetido){
+      const orden = {
+        comprador: { ...datosForm },
+        productos: [...carrito],
+        fecha: new Date(),
+        total: totalPrecio(),
+      };
+  
+      subirOrden(orden);
+    }else{
+      Swal.fire({
+        title: "Por favor, repite el correo electronico.",
+        showClass: {
+          popup: `
+            animate__animated
+            animate__fadeInUp
+            animate__faster
+          `
+        },
+        hideClass: {
+          popup: `
+            animate__animated
+            animate__fadeOutDown
+            animate__faster
+          `
+        }
+      });
 
-    subirOrden(orden);
+    }
   };
 
   const subirOrden = (orden) => {
@@ -39,7 +67,7 @@ const Checkout = () => {
   };
 
   return (
-    <div>
+    <section>
       {idOrden ? (<section className="orden-fin">
           <article className="genera-orden">
             <h3>SU PEDIDO FUE INGRESADO CON EXITO</h3>
@@ -70,7 +98,9 @@ const Checkout = () => {
           enviarOrder={enviarOrder}
         />
       )}
-    </div>
+    </section>
   );
 };
+
+
 export default Checkout;

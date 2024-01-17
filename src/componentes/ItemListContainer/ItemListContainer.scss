@@ -20,3 +20,19 @@
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .item-list-container {
+    padding: 0 10px;
+  }
+
+  .item-list-container .bienvenida {
+    font-size: 1.8em; 
+    margin: 20px 20px 20px 20px;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .cargando {
+    height: auto;
+  }
+}

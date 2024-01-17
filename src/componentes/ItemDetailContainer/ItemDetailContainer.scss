@@ -5,8 +5,8 @@
     height: 50px;
     margin: 30px;
     border-radius: 8px;
-    background:  #404042;    
-    cursor:pointer;
+    background: #404042;
+    cursor: pointer;
     font-weight: bold;
     padding: .6em;
     text-align: center;
@@ -19,9 +19,17 @@
     height: 50px;
     margin: 30px;
     border-radius: 8px;
-    background:  #ffa500;    
-    cursor:pointer;
+    background: #ffa500;
+    cursor: pointer;
     font-weight: bold;
     padding: .6em;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .buttons-detail {
+        width: 100%;
+        margin: 15px;
+        font-size: .8em;
+    }
 }

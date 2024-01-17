@@ -11,4 +11,14 @@
     gap: 10px;
     flex-wrap: wrap;
     border-radius: 30px;
+
+
+}
+
+@media (max-width: 768px) {
+    .item-list {
+        flex-direction: column;
+        padding: 15px;
+        gap: 5px;
+    }
 }

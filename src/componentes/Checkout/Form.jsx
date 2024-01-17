@@ -4,13 +4,11 @@ const Form = ({ datosForm, guardarDatosInput, enviarOrder }) => {
   return (
     <article className="article-form">
       <article>
-
-      <h2 >FINALIZAR COMPRA</h2>
-
+        <h2>FINALIZAR COMPRA</h2>
       </article>
 
       <form onSubmit={enviarOrder}>
-      <h4>DETALLES DE FACTURACION</h4>
+        <h4>DETALLES DE FACTURACION</h4>
         <label htmlFor="nombre">NOMBRE COMPLETO</label>
         <input
           type="text"
@@ -19,6 +17,7 @@ const Form = ({ datosForm, guardarDatosInput, enviarOrder }) => {
           placeholder="Ingrese su Nombre"
           value={datosForm.nombre}
           onChange={guardarDatosInput}
+          required
         />
 
         <label htmlFor="telefono">TELEFONO</label>
@@ -29,6 +28,7 @@ const Form = ({ datosForm, guardarDatosInput, enviarOrder }) => {
           placeholder="Ingrese su Telefono"
           value={datosForm.telefono}
           onChange={guardarDatosInput}
+          required
         />
 
         <label htmlFor="email">CORREO ELECTRONICO</label>
@@ -36,12 +36,26 @@ const Form = ({ datosForm, guardarDatosInput, enviarOrder }) => {
           type="email"
           id="email"
           name="email"
-          placeholder="Ingrese su Correo"
+          placeholder="Ingrese su Correo Electronico"
           value={datosForm.email}
           onChange={guardarDatosInput}
+          required
         />
 
-        <button className="button-d" type="submit">ENVIAR PEDIDO</button>
+        <label htmlFor="emailRepetido">REPETIR CORREO ELECTRONICO</label>
+        <input
+          type="email"
+          id="emailRepetido"
+          name="emailRepetido"
+          placeholder="Repita su Correo Electronico"
+          value={datosForm.emailRepetido}
+          onChange={guardarDatosInput}
+          required
+        />
+
+        <button className="button-d" type="submit">
+          ENVIAR PEDIDO
+        </button>
       </form>
     </article>
   );
