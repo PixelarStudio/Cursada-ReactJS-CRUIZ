@@ -28,7 +28,6 @@ ProGamer es una plataforma de e-commerce especializada en artículos de informá
 ## 📦 Dependencias Utilizadas
 
 - Firebase
-- Node
 - React
 - React-dom
 - React-icons
@@ -36,7 +35,7 @@ ProGamer es una plataforma de e-commerce especializada en artículos de informá
 - React-spinners
 - Rollup
 - Sass
-- SweetAlert2
+- React-Toastify
 
 ## 🛠 Tecnologías Utilizadas
 
@@ -71,5 +70,5 @@ Iniciar el Proyecto:
   npm run dev
 ```
 
-## 🔗 Repositorio de la Cursada
+## 🔗 Repositorio Del Proyecto: 
 - [Cursada ReactJS por CJRUIZ-WEBDESIGN](https://github.com/CJRUIZ-WEBDESIGN/Cursada-ReactJS-CRUIZ)

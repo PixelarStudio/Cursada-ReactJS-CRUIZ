@@ -7,13 +7,17 @@ import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailCon
 import Carrito from "./componentes/Carrito/Carrito";
 import Checkout from "./componentes/Checkout/Checkout";
 import Error from "./componentes/Error/Error";
+import { ToastContainer } from 'react-toastify';
 
 import "./App.scss";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <BrowserRouter>
       <CartProvider>
+      <ToastContainer />
+
         <NavBar />
         <Routes>
           <Route

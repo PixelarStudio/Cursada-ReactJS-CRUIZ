@@ -2,10 +2,11 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../CartContext/CartContext";
 import { addDoc, collection } from "firebase/firestore";
+import { toast } from 'react-toastify';
+
 
 import Form from "./Form";
 import db from "../../db/Db";
-import Swal from "sweetalert2";
 
 import "./Checkout.scss";
 
@@ -35,22 +36,19 @@ const Checkout = () => {
 
       subirOrden(orden);
     } else {
-      Swal.fire({
-        title: "Por favor, repite el correo electronico.",
-        showClass: {
-          popup: `
-            animate__animated
-            animate__fadeInUp
-            animate__faster
-          `,
+      toast.error("Por favor, repite el correo electrónico.", {
+        style: {
+          backgroundColor: "#ffa500", 
+          color: "#404042",
+          fontWeight: "bold",
         },
-        hideClass: {
-          popup: `
-            animate__animated
-            animate__fadeOutDown
-            animate__faster
-          `,
-        },
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
       });
     }
   };
