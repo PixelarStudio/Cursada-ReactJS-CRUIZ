@@ -1,4 +1,4 @@
-![Logo](https://raw.githubusercontent.com/CJRUIZ-WEBDESIGN/Cursada-ReactJS-CRUIZ/main/public/img/Logo.webp)
+![Logo](https://raw.githubusercontent.com/PixelarStudio/Cursada-ReactJS-CRUIZ/main/public/img/Logo.webp)
 
 # Proyecto ProGamer - Ecommerce de Informática
 
@@ -49,7 +49,7 @@ ProGamer es una plataforma de e-commerce especializada en artículos de informá
 Clonar el Repositorio: 
 
 ```bash
-  git clone https://github.com/CJRUIZ-WEBDESIGN/Cursada-ReactJS-CRUIZ.git
+  git clone https://github.com/PixelarStudio/Cursada-ReactJS-CRUIZ.git
 ```
 
 Ingresar al Proyecto:
@@ -71,4 +71,4 @@ Iniciar el Proyecto:
 ```
 
 ## 🔗 Repositorio Del Proyecto: 
-- [Cursada ReactJS por CJRUIZ-WEBDESIGN](https://github.com/CJRUIZ-WEBDESIGN/Cursada-ReactJS-CRUIZ)
+- [Cursada ReactJS por PixelarStudio](https://github.com/PixelarStudio/Cursada-ReactJS-CRUIZ)
